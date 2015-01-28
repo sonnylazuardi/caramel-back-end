@@ -10,10 +10,7 @@ This is a repo for a caramel backend.
 5. View in browser at http://localhost:8080
 
 ## Future Additions
-- CRUD examples
-- Development and Production Environments
-- Link examples
-- Single Page AngularJS Animations
+- Mongo Database Schema
 
 ## License
 
