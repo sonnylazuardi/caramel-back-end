@@ -11,73 +11,73 @@ var notifications = require('./controllers/notifications');
 
 module.exports = function(app) {
 
-    app.param('id', houses.load);
+    app.param('idHouse', houses.load);
     app.get('/houses', houses.index);
     app.post('/houses', houses.create);
-    app.get('/houses/:id', houses.show);
-    app.put('/houses/:id', houses.update);
-    app.delete('/houses/:id', houses.destroy);
+    app.get('/houses/:idHouse', houses.show);
+    app.put('/houses/:idHouse', houses.update);
+    app.delete('/houses/:idHouse', houses.destroy);
 
-    app.param('id', users.load);
+    app.param('idUser', users.load);
     app.get('/users', users.index);
     app.post('/users', users.create);
-    app.get('/users/:id', users.show);
-    app.put('/users/:id', users.update);
-    app.delete('/users/:id', users.destroy);
+    app.get('/users/:idUser', users.show);
+    app.put('/users/:idUser', users.update);
+    app.delete('/users/:idUser', users.destroy);
 
-    app.param('id', maps.load);
+    app.param('idMap', maps.load);
     app.get('/maps', maps.index);
     app.post('/maps', maps.create);
-    app.get('/maps/:id', maps.show);
-    app.put('/maps/:id', maps.update);
-    app.delete('/maps/:id', maps.destroy);
+    app.get('/maps/:idMap', maps.show);
+    app.put('/maps/:idMap', maps.update);
+    app.delete('/maps/:idMap', maps.destroy);
 
-    app.param('id', schedules.load);
+    app.param('idSchedule', schedules.load);
     app.get('/schedules', schedules.index);
     app.post('/schedules', schedules.create);
-    app.get('/schedules/:id', schedules.show);
-    app.put('/schedules/:id', schedules.update);
-    app.delete('/schedules/:id', schedules.destroy);
+    app.get('/schedules/:idSchedule', schedules.show);
+    app.put('/schedules/:idSchedule', schedules.update);
+    app.delete('/schedules/:idSchedule', schedules.destroy);
 
-    app.param('id', devices.load);
+    app.param('idDevice', devices.load);
     app.get('/devices', devices.index);
     app.post('/devices', devices.create);
-    app.get('/devices/:id', devices.show);
-    app.put('/devices/:id', devices.update);
-    app.delete('/devices/:id', devices.destroy);
+    app.get('/devices/:idDevice', devices.show);
+    app.put('/devices/:idDevice', devices.update);
+    app.delete('/devices/:idDevice', devices.destroy);
 
-    app.param('id', admins.load);
+    app.param('idAdmin', admins.load);
     app.get('/admins', admins.index);
     app.post('/admins', admins.create);
-    app.get('/admins/:id', admins.show);
-    app.put('/admins/:id', admins.update);
-    app.delete('/admins/:id', admins.destroy);
+    app.get('/admins/:idAdmin', admins.show);
+    app.put('/admins/:idAdmin', admins.update);
+    app.delete('/admins/:idAdmin', admins.destroy);
 
-    app.param('id', usages.load);
+    app.param('idUsage', usages.load);
     app.get('/usages', usages.index);
     app.post('/usages', usages.create);
-    app.get('/usages/:id', usages.show);
-    app.put('/usages/:id', usages.update);
-    app.delete('/usages/:id', usages.destroy);
+    app.get('/usages/:idUsage', usages.show);
+    app.put('/usages/:idUsage', usages.update);
+    app.delete('/usages/:idUsage', usages.destroy);
 
-    app.param('id', adminLogs.load);
+    app.param('idAdminLog', adminLogs.load);
     app.get('/adminLogs', adminLogs.index);
     app.post('/adminLogs', adminLogs.create);
-    app.get('/adminLogs/:id', adminLogs.show);
-    app.put('/adminLogs/:id', adminLogs.update);
-    app.delete('/adminLogs/:id', adminLogs.destroy);
+    app.get('/adminLogs/:idAdminLog', adminLogs.show);
+    app.put('/adminLogs/:idAdminLog', adminLogs.update);
+    app.delete('/adminLogs/:idAdminLog', adminLogs.destroy);
 
-    app.param('id', complains.load);
+    app.param('idComplain', complains.load);
     app.get('/complains', complains.index);
     app.post('/complains', complains.create);
-    app.get('/complains/:id', complains.show);
-    app.put('/complains/:id', complains.update);
-    app.delete('/complains/:id', complains.destroy);
+    app.get('/complains/:idComplain', complains.show);
+    app.put('/complains/:idComplain', complains.update);
+    app.delete('/complains/:idComplain', complains.destroy);
 
-    app.param('id', notifications.load);
+    app.param('idNotification', notifications.load);
     app.get('/notifications', notifications.index);
     app.post('/notifications', notifications.create);
-    app.get('/notifications/:id', notifications.show);
-    app.put('/notifications/:id', notifications.update);
-    app.delete('/notifications/:id', notifications.destroy);
+    app.get('/notifications/:idNotification', notifications.show);
+    app.put('/notifications/:idNotification', notifications.update);
+    app.delete('/notifications/:idNotification', notifications.destroy);
 };

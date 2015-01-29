@@ -1,9 +1,11 @@
 var express        = require('express');
 var app            = express();
+var http           = require('http').Server(app);
 var mongoose       = require('mongoose');
 var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
 var fs             = require('fs');
+var io             = require('socket.io')(http);
 
 var db = require('./config/db');
 
@@ -23,6 +25,11 @@ app.use(express.static(__dirname + '/public'));
 
 require('./app/routes')(app);
 
-app.listen(port);
-console.log('Magic happens on port ' + port);
+io.on('connection', function(socket){
+  console.log('a user connected');
+});
+
+http.listen(port, function() {
+  console.log('Magic happens on port ' + port);    
+});
 exports = module.exports = app;

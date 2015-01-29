@@ -5,7 +5,8 @@ var extend = require('util')._extend;
 exports.load = function (req, res, next, id){
   House.findOne({_id: id}, function (err, house) {
     if (err) return next(err);
-    if (!house) return next(new Error('not found'));
+    console.log(house);
+    // if (!house) return next(new Error('not found'));
     req.house = house;
     next();
   });
